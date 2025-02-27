@@ -1,4 +1,5 @@
 """
+11111111111111111111
 # Dj в nginx // "пошли душить питона..."
 # туда же: Dockerfile / docker-compose3.yaml / nginx-conf.d/test.world-itech.ru.conf
 #----------------------
@@ -56,7 +57,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
+            "hosts": [("redis_dj_training", 6379)],
         },
     },
 }
@@ -112,7 +113,7 @@ DATABASES = {
         'NAME': 'chat_postgres',
         'USER': 'admin',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'HOST': 'db_postgres',
         'PORT':  '5432',
     }
 }
