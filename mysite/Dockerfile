@@ -1,11 +1,11 @@
 FROM python
 #COPY requirements.txt .
 #COPY tests/test_api.py .
-COPY . .
+COPY . /app/
 #COPY pages .
 #COPY tests .
 #RUN mkdir allure-results
-RUN pip install -r requirements.txt
+RUN cd app && pip install -r requirements.txt
 
 # установка Chrome (нужен для Selenium тестов)
 #RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
